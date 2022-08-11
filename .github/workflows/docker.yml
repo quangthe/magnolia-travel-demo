@@ -55,7 +55,7 @@ jobs:
       - name: Download bundle artifact
         uses: actions/download-artifact@v3
         with:
-          name: magnolia-bundle
+          name: magnolia-travel-demo-webapp.war
           path: magnolia-travel-demo-webapp/target/
       - name: Display structure of downloaded files
         run: ls -R
