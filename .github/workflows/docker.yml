@@ -29,7 +29,15 @@ jobs:
         with:
           java-version: '11'
           distribution: 'zulu'
-          cache: maven
+          # cache: maven
+      # https://github.com/actions/cache/blob/master/examples.md#java---maven
+      - name: Cache local Maven repository
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
       - name: Build with Maven
         run: mvn package -s .m2/settings.xml
       - name: Archive Magnolia bundle
