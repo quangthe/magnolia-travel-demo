@@ -9,3 +9,7 @@ mvn archetype:generate \
 -DarchetypeArtifactId=magnolia-project-archetype 
 -DarchetypeVersion=RELEASE
 ```
+
+## Output
+
+Docker image [pcloud/magnolia-travel-demo](https://hub.docker.com/repository/docker/pcloud/magnolia-travel-demo)
