@@ -4,7 +4,7 @@
   <groupId>com.pcloud.paas</groupId>
   <artifactId>magnolia-travel-demo</artifactId>
   <name>magnolia-travel-demo (parent pom)</name>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.1</version>
   <packaging>pom</packaging>
 
   <properties>
@@ -19,7 +19,7 @@
   <!-- Fill the following in, so you can use the release plugin -->
   <scm>
     <developerConnection>scm:git:https://github.com/quangthe/magnolia-travel-demo.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>magnolia-travel-demo-1.1</tag>
   </scm>
   <distributionManagement>
     <repository>
