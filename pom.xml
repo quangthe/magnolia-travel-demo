@@ -10,14 +10,25 @@
   <properties>
     <magnoliaBundleVersion>6.2.22</magnoliaBundleVersion>
     <javaVersion>1.8</javaVersion>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <!-- configure a Maven project to use a specific server -->
+    <project.scm.id>github</project.scm.id>
   </properties>
 
   <!-- Fill the following in, so you can use the release plugin -->
   <scm>
-    <connection/>
-    <developerConnection/>
-    <url/>
+    <developerConnection>scm:git:https://github.com/${git.repository}.git</developerConnection>
+    <tag>HEAD</tag>
   </scm>
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub</name>
+      <!-- The root of GitHub registry is at https://maven.pkg.github.com -->
+      <url>https://maven.pkg.github.com/${git.repository}</url>
+    </repository>
+  </distributionManagement>
 
   <dependencyManagement>
     <dependencies>
