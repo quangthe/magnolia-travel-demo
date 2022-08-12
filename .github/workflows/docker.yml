@@ -30,9 +30,6 @@ jobs:
           java-version: '11'
           distribution: 'zulu'
           cache: maven
-      # debug
-      - name: View default ~/.m2/settings.xml
-        run: cat ~/.m2/settings.xml
 
       - name: Build with Maven
         run: mvn package -s .m2/settings.xml
