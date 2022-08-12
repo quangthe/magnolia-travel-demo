@@ -30,6 +30,9 @@ jobs:
           java-version: '11'
           distribution: 'zulu'
           cache: maven
+      # debug
+      - name: View default ~/.m2/settings.xml
+        run: cat ~/.m2/settings.xml
 
       - name: Build with Maven
         run: mvn package -s .m2/settings.xml
@@ -57,10 +60,6 @@ jobs:
         with:
           name: magnolia-travel-demo-webapp.war
           path: magnolia-travel-demo-webapp/target/
-
-      - name: Display structure of downloaded files
-        run: ls -R
-        working-directory: magnolia-travel-demo-webapp/target/
 
       - name: Setup Docker buildx
         uses: docker/setup-buildx-action@v1
