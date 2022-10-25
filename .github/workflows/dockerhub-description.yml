@@ -1,5 +1,11 @@
 name: Update Docker Hub Description
 on:
+  workflow_dispatch:
+    inputs:
+      note:
+        description: "Notes"
+        required: false
+        default: "Manual trigger"
   push:
     branches:
       - main
