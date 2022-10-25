@@ -15,5 +15,5 @@ Docker image [pcloud/magnolia-travel-demo](https://hub.docker.com/repository/doc
 
 ## Docker tags
 
-[1.0.2](https://github.com/quangthe/magnolia-travel-demo/releases/tag/1.0.2) Magnolia `6.2.22`
-[1.0.3](https://github.com/quangthe/magnolia-travel-demo/releases/tag/1.0.3) Magnolia `6.2.23`
+- [1.0.2](https://github.com/quangthe/magnolia-travel-demo/releases/tag/1.0.2) Magnolia `6.2.22`
+- [1.0.3](https://github.com/quangthe/magnolia-travel-demo/releases/tag/1.0.3) Magnolia `6.2.23`
