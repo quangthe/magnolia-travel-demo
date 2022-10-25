@@ -95,12 +95,17 @@ jobs:
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
-          image-ref: ${{ steps.meta.outputs.tags[0] }}
+          # workaround
+          # as steps.meta.outputs.tags is a tags string separated by comma,
+          # it cannot be used as image-ref which required single tag
+          image-ref: ${{ env.REGISTRY }}/${{ env.IMAGE }}
           format: "sarif"
           output: "trivy-results.sarif"
 
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@v1
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           sarif_file: "trivy-results.sarif"
