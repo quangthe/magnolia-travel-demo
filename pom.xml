@@ -8,7 +8,7 @@
   <packaging>pom</packaging>
 
   <properties>
-    <magnoliaBundleVersion>6.2.24</magnoliaBundleVersion>
+    <magnoliaBundleVersion>6.2.25</magnoliaBundleVersion>
     <javaVersion>1.8</javaVersion>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
